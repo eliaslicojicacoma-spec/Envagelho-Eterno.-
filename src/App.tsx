@@ -1,19 +1,23 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Sobre from './pages/Sobre';
 import Contacto from './pages/Contacto';
-import Biblia from './pages/Biblia';
+import Privacidade from './pages/Privacidade';
+import CookieBanner from './components/CookieBanner';
 
-const App: React.FC = () => {
+function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/sobre" element={<Sobre />} />
-      <Route path="/contacto" element={<Contacto />} />
-      <Route path="/biblia" element={<Biblia />} />
-    </Routes>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/sobre" element={<Sobre />} />
+        <Route path="/contacto" element={<Contacto />} />
+        <Route path="/privacidade" element={<Privacidade />} />
+      </Routes>
+      <CookieBanner /> 
+    </Router>
   );
-};
+}
 
 export default App;
