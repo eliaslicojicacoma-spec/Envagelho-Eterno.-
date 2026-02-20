@@ -1,17 +1,31 @@
 import React from 'react';
+import { Container } from '../components/layout/Container';
+import { SectionTitle } from '../components/ui/SectionTitle';
+import { motion } from 'framer-motion';
 
 const Sobre: React.FC = () => {
   return (
-    <main className="pt-20 px-8">
-      <h2 className="text-4xl font-bold mb-6">Nossa Missão</h2>
-      <p className="text-lg mb-4">
-        Este ministério dedica-se à proclamação das três mensagens angélicas, 
-        fortalecendo a fé através do estudo das profecias e da verdade bíblica.
-      </p>
-      <p className="text-lg">
-        Preparando um povo para o breve retorno de Jesus Cristo e compartilhando a luz do Evangelho Eterno.
-      </p>
-    </main>
+    <div className="pt-32 pb-20">
+      <Container>
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
+          <SectionTitle 
+            title="Nossa Missão" 
+            subtitle="Proclamar o Evangelho Eterno a cada nação, tribo, língua e povo."
+          />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mt-20">
+            <div>
+              <img src="https://picsum.photos/800/1000?seed=mission" alt="Mission" className="rounded-3xl shadow-2xl"/>
+            </div>
+            <div className="space-y-8">
+              <h3 className="text-3xl font-serif">Quem Somos</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Ministério Evangelho Eterno compartilha as verdades bíblicas fundamentais para o tempo do fim.
+              </p>
+            </div>
+          </div>
+        </motion.div>
+      </Container>
+    </div>
   );
 };
 
