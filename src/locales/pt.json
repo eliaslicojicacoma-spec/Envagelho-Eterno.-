@@ -1,0 +1,36 @@
+{
+  "nav": {
+    "home": "Início",
+    "about": "Sobre",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "title": "O Evangelho Eterno",
+    "subtitle": "Proclamando a verdade presente para este tempo.",
+    "cta": "Saiba Mais"
+  },
+  "messages": {
+    "title": "As Três Mensagens Angélicas",
+    "first": {
+      "title": "A Primeira Mensagem",
+      "desc": "Temei a Deus e dai-lhe glória, pois é chegada a hora do seu juízo."
+    },
+    "second": {
+      "title": "A Segunda Mensagem",
+      "desc": "Caiu, caiu a grande Babilônia, que a todas as nações deu a beber do vinho da fúria da sua prostituição."
+    },
+    "third": {
+      "title": "A Terceira Mensagem",
+      "desc": "Se alguém adora a besta e a sua imagem... também esse beberá do vinho da cólera de Deus."
+    }
+  },
+  "contact": {
+    "title": "Entre em Contacto",
+    "email": "Email",
+    "message": "Mensagem",
+    "send": "Enviar Mensagem"
+  },
+  "footer": {
+    "rights": "Todos os direitos reservados."
+  }
+}
