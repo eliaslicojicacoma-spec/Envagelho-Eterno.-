@@ -1,47 +1,19 @@
-import { useState } from "react"
+import React from 'react';
 
-export default function Biblia() {
-  const [livro, setLivro] = useState("john")
-  const [capitulo, setCapitulo] = useState("3")
-  const [texto, setTexto] = useState("")
-
-  const buscarCapitulo = async () => {
-    try {
-      const response = await fetch(
-        `https://bible-api.com/${livro}%20${capitulo}?translation=almeida`
-      )
-      const data = await response.json()
-      setTexto(data.text)
-    } catch (error) {
-      console.error("Erro ao buscar capítulo:", error)
-    }
-  }
-
+const Biblia: React.FC = () => {
   return (
-    <div style={{ padding: "40px" }}>
-      <h2>Bíblia Online</h2>
+    <main className="pt-20 px-8">
+      <h2 className="text-4xl font-bold mb-6 text-center">Bíblia Online</h2>
+      <iframe
+        src="https://www.bible.com/pt/bible/127/GEN.1.ARC"
+        title="Bíblia Online"
+        className="w-full h-[80vh] border-0 rounded-lg shadow-lg"
+      ></iframe>
+      <p className="text-center mt-4 text-gray-600 text-sm">
+        Visualização fornecida pela YouVersion Bible
+      </p>
+    </main>
+  );
+};
 
-      <input
-        type="text"
-        placeholder="Livro (ex: john)"
-        value={livro}
-        onChange={(e) => setLivro(e.target.value)}
-      />
-
-      <input
-        type="text"
-        placeholder="Capítulo"
-        value={capitulo}
-        onChange={(e) => setCapitulo(e.target.value)}
-      />
-
-      <button onClick={buscarCapitulo}>
-        Buscar
-      </button>
-
-      <pre style={{ marginTop: "20px", whiteSpace: "pre-wrap" }}>
-        {texto}
-      </pre>
-    </div>
-  )
-}
+export default Biblia;
