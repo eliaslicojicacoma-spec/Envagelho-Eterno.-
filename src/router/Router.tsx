@@ -1,14 +1,19 @@
-import { Routes, Route } from 'react-router-dom';
-import { Home } from '@/src/pages/Home';
-import { Sobre } from '@/src/pages/Sobre';
-import { Contacto } from '@/src/pages/Contacto';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import { Home } from "../pages/Home";
+import { Sobre } from "../pages/Sobre";
+import { Contacto } from "../pages/Contacto";
+import Biblia from "../pages/Biblia";
 
 export const Router = () => {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/sobre" element={<Sobre />} />
-      <Route path="/contacto" element={<Contacto />} />
-    </Routes>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/sobre" element={<Sobre />} />
+        <Route path="/contacto" element={<Contacto />} />
+        <Route path="/biblia" element={<Biblia />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
